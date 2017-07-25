@@ -165,8 +165,8 @@ public class Crypt {
             InputStream keystoreStream = new FileInputStream(keystoreFile);
             keyStore = AESEncryption.loadKeyStore(keystorePass, keystoreStream);
         } catch (GeneralSecurityException e) {
-        } catch (IOException e) {
-        }
+        } catch (IOException e) {}
+
         if (keyStore == null) {
             return null;
         }
