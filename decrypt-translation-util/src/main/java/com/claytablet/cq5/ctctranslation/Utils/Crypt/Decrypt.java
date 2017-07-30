@@ -12,30 +12,12 @@ import java.security.GeneralSecurityException;
 import java.security.Key;
 import java.security.KeyStore;
 
-public class Decrypt{
+/**
+ * Created by kche on 03/11/2014.
+ */
+
+public class Decrypt extends Crypt{
     public static final String CRYPT_FILE_EXT = "cpt";
-
-    public static Key getKeyFromKeystoreFile (File keystoreFile, String keystorePass, String keyAlias, String keyPass) {
-        KeyStore keyStore = null;
-
-        try {
-            InputStream keystoreStream = new FileInputStream(keystoreFile);
-            keyStore = AESEncryption.loadKeyStore(keystorePass, keystoreStream);
-        } catch (GeneralSecurityException e) {
-        } catch (IOException e) {}
-
-        if (keyStore == null) {
-            return null;
-        }
-
-        Key foundKey = null;
-
-        try {
-            foundKey = keyStore.getKey(keyAlias, keyPass.toCharArray());
-        } catch (GeneralSecurityException e) {}
-
-        return foundKey;
-    }
 
     public static String decryptInputStream(Key key, InputStream is) {
         if (key == null) {
@@ -93,7 +75,7 @@ public class Decrypt{
         String p = cmd.getOptionValue("p");
 
         File keystoreFile = new File(s);
-        Key key = getKeyFromKeystoreFile(keystoreFile, w, a, p);
+        Key key = super.getKeyFromKeystoreFile(keystoreFile, w, a, p);
 
         File payloadFile = new File(i);
         String decrypted = decryptFile(payloadFile, key);
