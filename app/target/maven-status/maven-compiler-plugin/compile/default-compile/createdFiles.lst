@@ -1,0 +1,6 @@
+com/claytablet/cq5/ctctranslation/Utils/FastBase64.class
+com/claytablet/cq5/ctctranslation/Utils/XMLUtil.class
+com/claytablet/cq5/ctctranslation/Utils/Crypt/Encrypt.class
+com/claytablet/cq5/ctctranslation/Utils/Crypt/Crypt.class
+com/claytablet/cq5/ctctranslation/Utils/Crypt/AESEncryption.class
+com/claytablet/cq5/ctctranslation/Utils/Crypt/Decrypt.class

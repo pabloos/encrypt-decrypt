@@ -50,7 +50,7 @@ public class Encrypt extends Crypt{
         String p = cmd.getOptionValue("p");
 
         File keystoreFile = new File(s);
-        Key key = super.getKeyFromKeystoreFile(keystoreFile, w, a, p);
+        Key key = Crypt.getKeyFromKeystoreFile(keystoreFile, w, a, p);
 
         File payloadFile = new File(i);
         
