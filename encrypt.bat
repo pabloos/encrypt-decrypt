@@ -21,6 +21,6 @@ for /D %%d in (*) do (
     cd ..
 )
 
-echo %direc%
-
 exit /b
+
+cd %direc%
