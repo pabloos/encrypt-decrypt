@@ -1,7 +1,6 @@
 @echo off
 
 set root=%1
-
 set direc=%cd%
 set jar=%cd%\decrypt-translation-util-3.0.0.jar
 
@@ -20,8 +19,8 @@ for /D %%d in (*) do (
     call :treeProcess
 
     cd ..
-
-    IF NOT EXIST %%d*\ cd %root%
 )
+
+cd %direc%
 
 exit /b
