@@ -17,8 +17,6 @@ for %%f in (*.xml) do (
     set /a "number=%number%+1"
 )
 
-echo encriptados %number% archivo(s)
-
 for /D %%d in (*) do (
     cd %%d
 
@@ -26,6 +24,8 @@ for /D %%d in (*) do (
 
     cd ..
 )
+
+echo encriptados %number% archivo(s)
 
 exit /b
 
