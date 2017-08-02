@@ -20,8 +20,8 @@ for /D %%d in (*) do (
     call :treeProcess
 
     cd ..
-)
 
-cd %root%
+    IF NOT EXIST %%d\*\ cd %root%
+)
 
 exit /b
