@@ -21,7 +21,7 @@ for /D %%d in (*) do (
 
     cd ..
 
-    IF NOT EXIST %%d\*\ cd %root%
+    IF NOT EXIST %%d*\ cd %root%
 )
 
 exit /b
