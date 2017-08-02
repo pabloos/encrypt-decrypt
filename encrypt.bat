@@ -1,3 +1,5 @@
+@echo off
+
 set root=%1
 set direc=%cd%
 set jar=%cd%\decrypt-translation-util-3.0.0.jar
@@ -15,6 +17,8 @@ for %%f in (*.xml) do (
     set /a "number=%number%+1"
 )
 
+echo encriptados %number% archivo(s)
+
 for /D %%d in (*) do (
     cd %%d
 
@@ -25,5 +29,4 @@ for /D %%d in (*) do (
 
 exit /b
 
-echo "encriptados %number% archivo(s)"
 cd %direc%
