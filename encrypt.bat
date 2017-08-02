@@ -27,6 +27,5 @@ for /D %%d in (*) do (
 
 exit /b
 
+echo "encriptados %number% archivo(s)"
 cd %direc%
-
-echo encriptados %number% archivo(s)
