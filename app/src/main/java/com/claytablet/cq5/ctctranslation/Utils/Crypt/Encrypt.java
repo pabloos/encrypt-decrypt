@@ -24,7 +24,7 @@ public class Encrypt extends Crypt{
             throws GeneralSecurityException, IOException {
         String path = file.getAbsolutePath();
         byte[] base64EncodedEncryptedMsg = AESEncryption.getEncryptedBytes(key, new FileInputStream(file));
-        String newPath = path + "." + Crypt.CRYPT_FILE_EXT;
+        String newPath = path.replace(".xml", "") + "." + Crypt.CRYPT_FILE_EXT;
 
         FileUtils.writeByteArrayToFile(new File(newPath),base64EncodedEncryptedMsg);
 
