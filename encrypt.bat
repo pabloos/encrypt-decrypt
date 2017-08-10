@@ -6,6 +6,8 @@ set jar=%cd%\decrypt-translation-util-3.0.0.jar
 
 cd %root%
 
+echo %cd%
+
 call :treeProcess
 goto :eof
 
