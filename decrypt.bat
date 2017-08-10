@@ -4,6 +4,8 @@ set root=%1
 set direc=%cd%
 set jar=%cd%\decrypt-translation-util-3.0.0.jar
 
+cd %root%
+
 call :treeProcess
 goto :eof
 
