@@ -81,7 +81,7 @@ public class Decrypt extends Crypt{
         String decrypted = decryptFile(payloadFile, key);
 
         try{
-            PrintWriter writer = new PrintWriter(i.replace(".xml.cpt", ""), "UTF-8");
+            PrintWriter writer = new PrintWriter(i.replace(".cpt", ".xml"), "UTF-8");
             writer.println(decrypted);
             writer.close();
         } catch (IOException e) {
